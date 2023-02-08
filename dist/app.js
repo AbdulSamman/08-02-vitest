@@ -4,9 +4,13 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 app.get("/", (req, res) => {
-    res.send(model.getApiInstructions());
+    res.status(200).send(model.getApiInstructions());
 });
 app.get("/books", (req, res) => {
+    //test
+    //   if (cors === null) {
+    //     res.json(model.getBooks());
+    //   }
     res.json(model.getBooks());
 });
 app.get("/books/:id", (req, res) => {

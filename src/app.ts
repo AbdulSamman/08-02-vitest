@@ -6,10 +6,14 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req: express.Request, res: express.Response) => {
-  res.send(model.getApiInstructions());
+  res.status(200).send(model.getApiInstructions());
 });
 
 app.get("/books", (req: express.Request, res: express.Response) => {
+  //test
+  //   if (cors === null) {
+  //     res.json(model.getBooks());
+  //   }
   res.json(model.getBooks());
 });
 
