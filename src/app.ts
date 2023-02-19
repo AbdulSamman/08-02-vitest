@@ -14,7 +14,7 @@ app.get("/books", (req: express.Request, res: express.Response) => {
   //   if (cors === null) {
   //     res.json(model.getBooks());
   //   }
-  res.json(model.getBooks());
+  res.status(200).json(model.getBooks());
 });
 
 app.get("/books/:id", (req: express.Request, res: express.Response) => {

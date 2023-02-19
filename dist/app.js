@@ -11,7 +11,7 @@ app.get("/books", (req, res) => {
     //   if (cors === null) {
     //     res.json(model.getBooks());
     //   }
-    res.json(model.getBooks());
+    res.status(200).json(model.getBooks());
 });
 app.get("/books/:id", (req, res) => {
     const id = Number(req.params.id);
